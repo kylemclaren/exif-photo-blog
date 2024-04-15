@@ -47,7 +47,7 @@ export default function FooterClient({
                       <div>{userEmail}</div>
                       <form action={signOutAction}>
                         <SubmitButtonWithStatus styleAsLink>
-                          Sign out
+                          this was changed
                         </SubmitButtonWithStatus>
                       </form>
                     </>}
