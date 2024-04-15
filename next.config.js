@@ -9,10 +9,8 @@ const HOSTNAME_VERCEL_BLOB = VERCEL_BLOB_STORE_ID
 const HOSTNAME_CLOUDFLARE_R2 =
   process.env.NEXT_PUBLIC_CLOUDFLARE_R2_PUBLIC_DOMAIN;
 
-  const HOSTNAME_AWS_S3 = process.env.AWS_S3_BASE_URL ||
-  (process.env.NEXT_PUBLIC_AWS_S3_BUCKET && process.env.NEXT_PUBLIC_AWS_S3_REGION
-    ? `${process.env.NEXT_PUBLIC_AWS_S3_BUCKET}.s3.${process.env.NEXT_PUBLIC_AWS_S3_REGION}.amazonaws.com`
-    : undefined);
+const HOSTNAME_AWS_S3 =
+  process.env.AWS_S3_BASE_URL;
 
 const createRemotePattern = (hostname) => hostname
   ? {
