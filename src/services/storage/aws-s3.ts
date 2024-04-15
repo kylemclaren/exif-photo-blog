@@ -15,6 +15,7 @@ const AWS_S3_SECRET_ACCESS_KEY = process.env.AWS_S3_SECRET_ACCESS_KEY ?? '';
 export const AWS_S3_BASE_URL = process.env.AWS_S3_BASE_URL ?? '';
 
 export const awsS3Client = () => new S3Client({
+  endpoint: AWS_S3_BASE_URL,
   region: AWS_S3_REGION,
   credentials: {
     accessKeyId: AWS_S3_ACCESS_KEY,
