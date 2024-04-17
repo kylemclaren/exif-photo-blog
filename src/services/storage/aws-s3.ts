@@ -45,8 +45,7 @@ export const awsS3Copy = async (
   return awsS3Client().send(new CopyObjectCommand({
     Bucket: AWS_S3_BUCKET,
     CopySource: fileNameSource,
-    Key,
-    ACL: 'public-read',
+    Key
   }))
     .then(() => urlForKey(fileNameDestination));
 };
