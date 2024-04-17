@@ -30,7 +30,7 @@ export const isUrlFromAwsS3 = (url?: string) =>
   AWS_S3_BASE_URL && url?.startsWith(AWS_S3_BASE_URL);
 
 export const awsS3PutObjectCommandForKey = (Key: string) =>
-  new PutObjectCommand({ Bucket: AWS_S3_BUCKET, Key, ACL: 'public-read' });
+  new PutObjectCommand({ Bucket: AWS_S3_BUCKET, Key });
 
 export const awsS3Copy = async (
   fileNameSource: string,
